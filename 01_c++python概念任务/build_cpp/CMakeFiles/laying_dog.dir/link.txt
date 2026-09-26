@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/laying_dog.dir/simulate_laying_dog.cpp.o -o laying_dog  -Wl,-rpath,/home/pip/robocon/mujoco_training/00_mujoco_c++/lib /home/pip/robocon/mujoco_training/00_mujoco_c++/lib/libmujoco.so /usr/lib/x86_64-linux-gnu/libglfw.so.3.3 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so 
