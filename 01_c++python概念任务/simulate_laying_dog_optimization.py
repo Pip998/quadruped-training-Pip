@@ -1,75 +1,134 @@
+# ============================================================
+#  四足狗 MuJoCo 静止趴地仿真
+#  - 双线程架构：物理步进线程 + 渲染线程
+#  - 锁保护：mj_step 与 viewer.sync 互斥，防止数据竞争
+#  - 关节力矩恒为 0，符合任务要求
+#  - 结构参考 unitree_mujoco 官方示例
+# ============================================================
+
 import time
+import threading
 import numpy as np
+
 import mujoco
 import mujoco.viewer
 
-# ============ 加载 mujoco 模型 ============
-model = mujoco.MjModel.from_xml_path("black_description.xml")
-data = mujoco.MjData(model)
 
-# ============ 设置趴地初始姿态 ============
-# qpos 顺序：
-#   [0:3]   基座位置 (x, y, z)
-#   [3:7]   基座四元数 (w, x, y, z)
-#   [7:19]  12 个关节角，顺序按 XML 中 joint 出现顺序：
-#           FL_hip, FL_thigh, FL_calf,
-#           FR_hip, FR_thigh, FR_calf,
-#           RR_hip, RR_thigh, RR_calf,
-#           RL_hip, RL_thigh, RL_calf
+# ============================================================
+#  1. 加载模型与数据
+# ============================================================
+MODEL_PATH = "black_description_optimization.xml"
 
-# 1) 基座初始位置：略高于地面，让足底刚好接触地面
-data.qpos[0] = 0.0
-data.qpos[1] = 0.0
-data.qpos[2] = 0.4          # ★ 若穿地就调大，若悬空就调小
+model = mujoco.MjModel.from_xml_path(MODEL_PATH)
+data  = mujoco.MjData(model)
 
-# 2) 基座姿态：单位四元数，无旋转
-data.qpos[3:7] = [1.0, 0.0, 0.0, 0.0]
+# 全局锁：保护 mj_step 与 viewer.sync 不会同时访问 data
+# 物理线程持锁时，渲染线程等待；反之亦然。
+locker = threading.Lock()
 
-# 3) 12 个关节角：让狗呈“趴地”姿态
-#    参考 XML 限位：
-#      hip:   [-0.5,  0.5]
-#      FL/RL thigh: [-1.2, 1.6]   FR/RR thigh: [-1.6, 1.2]
-#      FL/RL calf:  [-2.5, -0.85]  FR/RR calf:  [0.85, 2.5]
-FL_hip, FL_thigh, FL_calf = 0.0,  0.7, -1.6
-FR_hip, FR_thigh, FR_calf = 0.0, -0.7,  1.6
-RR_hip, RR_thigh, RR_calf = 0.0, -0.7,  1.6
-RL_hip, RL_thigh, RL_calf = 0.0,  0.7, -1.6
 
-data.qpos[7:19] = [
-    FL_hip, FL_thigh, FL_calf,
-    FR_hip, FR_thigh, FR_calf,
-    RR_hip, RR_thigh, RR_calf,
-    RL_hip, RL_thigh, RL_calf,
-]
+# ============================================================
+#  2. 初始趴地姿态设置
+#     qpos 索引说明：
+#       [0:3]   基座位置 (x, y, z)
+#       [3:7]   基座姿态四元数 (w, x, y, z)
+#       [7:19]  12 个关节角，顺序为：
+#               FL_hip, FL_thigh, FL_calf,
+#               FR_hip, FR_thigh, FR_calf,
+#               RR_hip, RR_thigh, RR_calf,
+#               RL_hip, RL_thigh, RL_calf
+# ============================================================
+def init_prone_pose():
+    """设置初始趴地姿态：基座略高于地，四条腿弯曲折叠。"""
 
-# 4) 先做一次前向计算，使模型状态与 qpos 一致
-mujoco.mj_forward(model, data)
+    # --- 基座位置 ---
+    # z 值需要根据趴地时足底到基座的距离微调。
+    # 若狗脚穿地 -> 增大 z；若狗脚悬空下坠 -> 减小 z。
+    data.qpos[0] = 0.0
+    data.qpos[1] = 0.0
+    data.qpos[2] = 0.45
 
-# ============ 任务要求：所有关节力矩输出置 0 ============
-data.ctrl[:] = 1.0
+    # --- 基座姿态：单位四元数，无旋转 ---
+    data.qpos[3:7] = [1.0, 0.0, 0.0, 0.0]
 
-# ============ 启动被动仿真窗口 ============
-with mujoco.viewer.launch_passive(model, data) as viewer:
-    print("仿真启动，关闭窗口退出")
+    # --- 12 个关节角：四条腿对称折叠，趴地 ---
+    # 前腿：膝盖向后弯，calf 取负
+    # 后腿：膝盖向前弯，calf 取正
+    # （与 XML 中各 calf 关节的限位一致）
+    FL_hip, FL_thigh, FL_calf = 0.0,  0.7, -1.6
+    FR_hip, FR_thigh, FR_calf = 0.0, -0.7,  1.6
+    RR_hip, RR_thigh, RR_calf = 0.0, -0.7,  1.6
+    RL_hip, RL_thigh, RL_calf = 0.0,  0.7, -1.6
+
+    data.qpos[7:19] = [
+        FL_hip, FL_thigh, FL_calf,
+        FR_hip, FR_thigh, FR_calf,
+        RR_hip, RR_thigh, RR_calf,
+        RL_hip, RL_thigh, RL_calf,
+    ]
+
+    # 让模型状态与 qpos 一致（计算前向运动学、接触等）
+    mujoco.mj_forward(model, data)
+
+
+# 设置初始姿态
+init_prone_pose()
+
+# 任务要求：所有关节力矩输出为 0
+data.ctrl[:] = 0.0
+
+
+# ============================================================
+#  3. 线程函数
+# ============================================================
+def simulation_thread():
+    """
+    物理步进线程：
+      - 以 1/timestep 的频率执行 mj_step
+      - 持锁期间渲染线程不能 sync，保证数据一致
+    """
     while viewer.is_running():
-        
-        step_start = time.time()
+        step_start = time.perf_counter()
 
-        # 每次步进前都保持力矩为 0
-        data.ctrl[:] = 1.0
+        with locker:
+            data.ctrl[:] = 0.0          # 始终保持力矩为 0
+            mujoco.mj_step(model, data) # 物理步进
 
-        # 仿真一步
-        mujoco.mj_step(model, data)
+        # 固定仿真步长：若这一步算得快，就补足睡眠时间
+        elapsed = time.perf_counter() - step_start
+        sleep_time = model.opt.timestep - elapsed
+        if sleep_time > 0:
+            time.sleep(sleep_time)
 
-        # 更新画面
-        viewer.sync()
 
-        # 打印状态，便于判断是否稳定趴地
-        if int(data.time * 100) % 100 == 0:
-            print("t=%.2f  base_z=%.4f  |qvel|=%.4f"
-                  % (data.time, data.qpos[2], np.linalg.norm(data.qvel)))
+def viewer_thread():
+    """
+    渲染线程：
+      - 以约 50 Hz 调用 viewer.sync
+      - 持锁期间物理线程不能 mj_step
+    """
+    while viewer.is_running():
+        with locker:
+            viewer.sync()
+        time.sleep(0.02)   # 50 Hz
 
-        # 时间同步，固定仿真步长
-        time_cost = time.time() - step_start
-        if time_cost < model.opt.timestep:
-            time.sleep(model.opt.timestep - time_cost)
+
+# ============================================================
+#  4. 主入口：启动 viewer 与两个线程
+# ============================================================
+with mujoco.viewer.launch_passive(model, data) as viewer:
+    time.sleep(0.2)  # 等 viewer 初始化完毕
+
+    sim_thread = threading.Thread(target=simulation_thread, daemon=True)
+    vis_thread = threading.Thread(target=viewer_thread,     daemon=True)
+
+    sim_thread.start()
+    vis_thread.start()
+
+    print("仿真启动：关节力矩 = 0，狗应静止趴地。关闭窗口退出。")
+
+    # 主线程等待两个工作线程结束（关闭窗口后 daemon 线程自动退出）
+    sim_thread.join()
+    vis_thread.join()
+
+print("仿真结束。")
