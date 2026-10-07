@@ -1,0 +1,73 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/dog_msgs__rs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 0
+			}
+		]
+	},
+	"id" : "dog_msgs__rs::@8bfee9bb0300ff4b25c6",
+	"name" : "dog_msgs__rs",
+	"paths" : 
+	{
+		"build" : "dog_msgs__rs",
+		"source" : "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/dog_msgs__rs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/dog_msgs__rs/CMakeFiles/dog_msgs__rs",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/dog_msgs__rs/CMakeFiles/dog_msgs__rs.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/rosidl_generator_rs/dog_msgs/rust/src/lib.rs.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,322 @@
+[0.010s] Invoking command in '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs': /usr/bin/cmake /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/src/dog_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs
+[0.067s] -- The C compiler identification is GNU 11.4.0
+[0.126s] -- The CXX compiler identification is GNU 11.4.0
+[0.134s] -- Detecting C compiler ABI info
+[0.198s] -- Detecting C compiler ABI info - done
+[0.203s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.203s] -- Detecting C compile features
+[0.204s] -- Detecting C compile features - done
+[0.206s] -- Detecting CXX compiler ABI info
+[0.278s] -- Detecting CXX compiler ABI info - done
+[0.283s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.284s] -- Detecting CXX compile features
+[0.284s] -- Detecting CXX compile features - done
+[0.286s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.412s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.476s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.477s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.481s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.505s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.695s] -- Found ament_cmake_ros: 0.10.1 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.827s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.978s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.992s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[0.993s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.010s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.010s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.010s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.010s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.024s] -- Found PythonExtra: .so  
+[1.083s] -- Configuring done
+[1.106s] -- Generating done
+[1.108s] [33mCMake Warning:
+[1.108s]   Manually-specified variables were not used by the project:
+[1.108s] 
+[1.108s]     CATKIN_INSTALL_INTO_PREFIX_ROOT
+[1.108s]     CATKIN_SYMLINK_INSTALL
+[1.108s] 
+[1.108s] [0m
+[1.115s] -- Build files have been written to: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs
+[1.137s] Invoked command in '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs' returned '0': /usr/bin/cmake /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/src/dog_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs
+[1.139s] Invoking command in '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs': /usr/bin/cmake --build /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs -- -j32 -l32
+[1.168s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.174s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.176s] [  6%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[1.179s] [  6%] Built target ament_cmake_python_copy_dog_msgs
+[1.308s] running egg_info
+[1.308s] creating dog_msgs.egg-info
+[1.308s] writing dog_msgs.egg-info/PKG-INFO
+[1.308s] writing dependency_links to dog_msgs.egg-info/dependency_links.txt
+[1.308s] writing top-level names to dog_msgs.egg-info/top_level.txt
+[1.308s] writing manifest file 'dog_msgs.egg-info/SOURCES.txt'
+[1.309s] reading manifest file 'dog_msgs.egg-info/SOURCES.txt'
+[1.309s] writing manifest file 'dog_msgs.egg-info/SOURCES.txt'
+[1.335s] [  6%] Built target ament_cmake_python_build_dog_msgs_egg
+[1.337s] [  6%] Built target dog_msgs__rs
+[1.383s] [  6%] Built target dog_msgs__cpp
+[1.391s] [ 12%] [32mBuilding C object CMakeFiles/dog_msgs__rosidl_generator_c.dir/rosidl_generator_c/dog_msgs/msg/detail/motor_state__functions.c.o[0m
+[1.392s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.392s] [ 12%] [32mBuilding C object CMakeFiles/dog_msgs__rosidl_generator_c.dir/rosidl_generator_c/dog_msgs/msg/detail/controller_command__functions.c.o[0m
+[1.392s] [ 18%] [32mBuilding C object CMakeFiles/dog_msgs__rosidl_generator_c.dir/rosidl_generator_c/dog_msgs/srv/detail/handle_command__functions.c.o[0m
+[1.392s] [ 18%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.392s] [ 18%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.430s] [ 20%] [32m[1mLinking C shared library libdog_msgs__rosidl_generator_c.so[0m
+[1.457s] [ 20%] Built target dog_msgs__rosidl_generator_c
+[1.465s] [ 27%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.465s] [ 27%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.465s] [ 27%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.576s] [ 29%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dog_msgs/msg/controller_command__type_support.cpp.o[0m
+[1.576s] [ 31%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dog_msgs/srv/handle_command__type_support.cpp.o[0m
+[1.576s] [ 33%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dog_msgs/msg/motor_state__type_support.cpp.o[0m
+[1.584s] [ 35%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dog_msgs/msg/detail/controller_command__type_support.cpp.o[0m
+[1.584s] [ 37%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dog_msgs/srv/detail/handle_command__type_support.cpp.o[0m
+[1.585s] [ 39%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dog_msgs/msg/detail/motor_state__type_support.cpp.o[0m
+[1.596s] [ 43%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/dog_msgs/msg/detail/dds_fastrtps/controller_command__type_support.cpp.o[0m
+[1.596s] [ 43%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/dog_msgs/msg/detail/dds_fastrtps/motor_state__type_support.cpp.o[0m
+[1.596s] [ 45%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/dog_msgs/srv/detail/dds_fastrtps/handle_command__type_support.cpp.o[0m
+[1.640s] [ 52%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/dog_msgs/srv/handle_command__type_support.cpp.o[0m
+[1.640s] [ 52%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/dog_msgs/msg/motor_state__type_support.cpp.o[0m
+[1.640s] [ 52%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/dog_msgs/msg/controller_command__type_support.cpp.o[0m
+[1.677s] [ 54%] [32m[1mLinking CXX shared library libdog_msgs__rosidl_typesupport_c.so[0m
+[1.680s] [ 58%] [32mBuilding C object CMakeFiles/dog_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dog_msgs/msg/detail/controller_command__type_support.c.o[0m
+[1.680s] [ 58%] [32mBuilding C object CMakeFiles/dog_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dog_msgs/srv/detail/handle_command__type_support.c.o[0m
+[1.680s] [ 60%] [32mBuilding C object CMakeFiles/dog_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dog_msgs/msg/detail/motor_state__type_support.c.o[0m
+[1.707s] [ 64%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/dog_msgs/msg/detail/controller_command__type_support_c.cpp.o[0m
+[1.707s] [ 64%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/dog_msgs/msg/detail/motor_state__type_support_c.cpp.o[0m
+[1.712s] [ 66%] [32mBuilding CXX object CMakeFiles/dog_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/dog_msgs/srv/detail/handle_command__type_support_c.cpp.o[0m
+[1.722s] [ 68%] [32m[1mLinking C shared library libdog_msgs__rosidl_typesupport_introspection_c.so[0m
+[1.725s] [ 68%] Built target dog_msgs__rosidl_typesupport_c
+[1.759s] [ 68%] Built target dog_msgs__rosidl_typesupport_introspection_c
+[1.795s] [ 70%] [32m[1mLinking CXX shared library libdog_msgs__rosidl_typesupport_cpp.so[0m
+[1.835s] [ 70%] Built target dog_msgs__rosidl_typesupport_cpp
+[1.893s] [ 72%] [32m[1mLinking CXX shared library libdog_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[1.899s] [ 75%] [32m[1mLinking CXX shared library libdog_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[1.948s] [ 75%] Built target dog_msgs__rosidl_typesupport_introspection_cpp
+[1.949s] [ 75%] Built target dog_msgs__rosidl_typesupport_fastrtps_cpp
+[1.954s] [ 77%] [32m[1mLinking CXX shared library libdog_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[2.010s] [ 77%] Built target dog_msgs__rosidl_typesupport_fastrtps_c
+[2.026s] [ 77%] Built target dog_msgs
+[2.042s] [ 79%] [34m[1mGenerating Python code for ROS interfaces[0m
+[2.328s] [ 79%] Built target dog_msgs__py
+[2.342s] [ 83%] [32mBuilding C object CMakeFiles/dog_msgs__rosidl_generator_py.dir/rosidl_generator_py/dog_msgs/msg/_motor_state_s.c.o[0m
+[2.342s] [ 83%] [32mBuilding C object CMakeFiles/dog_msgs__rosidl_generator_py.dir/rosidl_generator_py/dog_msgs/msg/_controller_command_s.c.o[0m
+[2.344s] [ 85%] [32mBuilding C object CMakeFiles/dog_msgs__rosidl_generator_py.dir/rosidl_generator_py/dog_msgs/srv/_handle_command_s.c.o[0m
+[2.412s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/dog_msgs/libdog_msgs__rosidl_generator_py.so[0m
+[2.439s] [ 87%] Built target dog_msgs__rosidl_generator_py
+[2.452s] [ 89%] [32mBuilding C object CMakeFiles/dog_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/dog_msgs/_dog_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[2.453s] [ 91%] [32mBuilding C object CMakeFiles/dog_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/dog_msgs/_dog_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[2.454s] [ 93%] [32mBuilding C object CMakeFiles/dog_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/dog_msgs/_dog_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[2.512s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/dog_msgs/dog_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.512s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/dog_msgs/dog_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.515s] [100%] [32m[1mLinking C shared library rosidl_generator_py/dog_msgs/dog_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.536s] [100%] Built target dog_msgs__rosidl_typesupport_introspection_c__pyext
+[2.536s] [100%] Built target dog_msgs__rosidl_typesupport_c__pyext
+[2.541s] [100%] Built target dog_msgs__rosidl_typesupport_fastrtps_c__pyext
+[2.550s] Invoked command in '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs' returned '0': /usr/bin/cmake --build /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs -- -j32 -l32
+[2.557s] Invoking command in '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs': /usr/bin/cmake --install /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs
+[2.561s] -- Install configuration: ""
+[2.562s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/ament_index/resource_index/rosidl_interfaces/dog_msgs
+[2.562s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs
+[2.562s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg
+[2.562s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/motor_state.h
+[2.562s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/rosidl_generator_c__visibility_control.h
+[2.562s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/controller_command.h
+[2.562s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail
+[2.562s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__functions.h
+[2.562s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__functions.h
+[2.562s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__struct.h
+[2.562s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__struct.h
+[2.562s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__functions.c
+[2.563s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__type_support.h
+[2.563s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__functions.c
+[2.563s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__type_support.h
+[2.563s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv
+[2.563s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/handle_command.h
+[2.563s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail
+[2.563s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__functions.c
+[2.563s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__functions.h
+[2.563s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__struct.h
+[2.563s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__type_support.h
+[2.563s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/environment/library_path.sh
+[2.564s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/environment/library_path.dsv
+[2.564s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_generator_c.so
+[2.564s] -- Set runtime path of "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_generator_c.so" to ""
+[2.564s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs
+[2.564s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg
+[2.564s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.564s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail
+[2.564s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__rosidl_typesupport_fastrtps_c.h
+[2.564s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__rosidl_typesupport_fastrtps_c.h
+[2.564s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv
+[2.564s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail
+[2.564s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__rosidl_typesupport_fastrtps_c.h
+[2.565s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_typesupport_fastrtps_c.so
+[2.565s] -- Set runtime path of "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[2.565s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs
+[2.565s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg
+[2.565s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.565s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail
+[2.565s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__type_support.c
+[2.565s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__rosidl_typesupport_introspection_c.h
+[2.565s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__rosidl_typesupport_introspection_c.h
+[2.565s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__type_support.c
+[2.565s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv
+[2.565s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail
+[2.565s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__type_support.c
+[2.566s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__rosidl_typesupport_introspection_c.h
+[2.566s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_typesupport_introspection_c.so
+[2.566s] -- Set runtime path of "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_typesupport_introspection_c.so" to ""
+[2.566s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_typesupport_c.so
+[2.566s] -- Set runtime path of "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_typesupport_c.so" to ""
+[2.566s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs
+[2.566s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg
+[2.566s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[2.566s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/motor_state.hpp
+[2.566s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/controller_command.hpp
+[2.567s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail
+[2.567s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__builder.hpp
+[2.567s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__struct.hpp
+[2.567s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__builder.hpp
+[2.567s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__type_support.hpp
+[2.567s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__type_support.hpp
+[2.567s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__struct.hpp
+[2.567s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__traits.hpp
+[2.567s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__traits.hpp
+[2.567s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv
+[2.567s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/handle_command.hpp
+[2.567s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail
+[2.567s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__struct.hpp
+[2.567s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__builder.hpp
+[2.568s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__type_support.hpp
+[2.568s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__traits.hpp
+[2.568s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs
+[2.568s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg
+[2.568s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.568s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail
+[2.568s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__rosidl_typesupport_fastrtps_cpp.hpp
+[2.568s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__rosidl_typesupport_fastrtps_cpp.hpp
+[2.568s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/dds_fastrtps
+[2.568s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv
+[2.568s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail
+[2.568s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__rosidl_typesupport_fastrtps_cpp.hpp
+[2.568s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/dds_fastrtps
+[2.568s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_typesupport_fastrtps_cpp.so
+[2.569s] -- Set runtime path of "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[2.569s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs
+[2.569s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg
+[2.569s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail
+[2.569s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__rosidl_typesupport_introspection_cpp.hpp
+[2.569s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__rosidl_typesupport_introspection_cpp.hpp
+[2.569s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__type_support.cpp
+[2.569s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__type_support.cpp
+[2.569s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv
+[2.569s] -- Up-to-date: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail
+[2.569s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__rosidl_typesupport_introspection_cpp.hpp
+[2.569s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__type_support.cpp
+[2.569s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_typesupport_introspection_cpp.so
+[2.570s] -- Set runtime path of "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[2.570s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_typesupport_cpp.so
+[2.570s] -- Set runtime path of "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_typesupport_cpp.so" to ""
+[2.570s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/environment/pythonpath.sh
+[2.570s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/environment/pythonpath.dsv
+[2.570s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs-0.0.0-py3.10.egg-info
+[2.570s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[2.571s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[2.571s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[2.571s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[2.571s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs
+[2.571s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/msg
+[2.571s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/msg/_controller_command.py
+[2.571s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/msg/__init__.py
+[2.571s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/msg/_controller_command_s.c
+[2.571s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/msg/_motor_state.py
+[2.571s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/msg/_motor_state_s.c
+[2.571s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/_dog_msgs_s.ep.rosidl_typesupport_c.c
+[2.572s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/_dog_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[2.572s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/__init__.py
+[2.572s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/dog_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.572s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/srv
+[2.572s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/srv/_handle_command.py
+[2.572s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/srv/__init__.py
+[2.572s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/srv/_handle_command_s.c
+[2.572s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/dog_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.572s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/dog_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.572s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/_dog_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.573s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/libdog_msgs__rosidl_generator_py.so
+[2.595s] Listing '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs'...
+[2.595s] Compiling '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/__init__.py'...
+[2.595s] Listing '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/msg'...
+[2.595s] Compiling '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/msg/__init__.py'...
+[2.595s] Compiling '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/msg/_controller_command.py'...
+[2.595s] Compiling '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/msg/_motor_state.py'...
+[2.595s] Listing '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/srv'...
+[2.595s] Compiling '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/srv/__init__.py'...
+[2.595s] Compiling '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/srv/_handle_command.py'...
+[2.597s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/dog_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.598s] -- Set runtime path of "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/dog_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.598s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/dog_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.599s] -- Set runtime path of "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/dog_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.599s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/dog_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.599s] -- Set runtime path of "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/local/lib/python3.10/dist-packages/dog_msgs/dog_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.599s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_generator_py.so
+[2.599s] -- Set runtime path of "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/lib/libdog_msgs__rosidl_generator_py.so" to ""
+[2.600s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/rust
+[2.600s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/rust/Cargo.toml
+[2.600s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/rust/src
+[2.600s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/rust/src/msg
+[2.600s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/rust/src/msg/rmw.rs
+[2.600s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/rust/src/msg.rs
+[2.600s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/rust/src/srv
+[2.600s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/rust/src/srv/rmw.rs
+[2.600s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/rust/src/lib.rs
+[2.600s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/rust/src/srv.rs
+[2.600s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/rust/build.rs
+[2.600s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/msg/ControllerCommand.idl
+[2.600s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/msg/MotorState.idl
+[2.601s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/srv/HandleCommand.idl
+[2.601s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/msg/ControllerCommand.msg
+[2.601s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/msg/MotorState.msg
+[2.601s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/srv/HandleCommand.srv
+[2.601s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/srv/HandleCommand_Request.msg
+[2.601s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/srv/HandleCommand_Response.msg
+[2.601s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/ament_index/resource_index/package_run_dependencies/dog_msgs
+[2.601s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/ament_index/resource_index/parent_prefix_path/dog_msgs
+[2.601s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/environment/ament_prefix_path.sh
+[2.601s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/environment/ament_prefix_path.dsv
+[2.602s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/environment/path.sh
+[2.602s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/environment/path.dsv
+[2.602s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/local_setup.bash
+[2.602s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/local_setup.sh
+[2.602s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/local_setup.zsh
+[2.602s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/local_setup.dsv
+[2.602s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/package.dsv
+[2.602s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/ament_index/resource_index/packages/dog_msgs
+[2.602s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/export_dog_msgs__rosidl_generator_cExport.cmake
+[2.602s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/export_dog_msgs__rosidl_generator_cExport-noconfig.cmake
+[2.603s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/export_dog_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[2.603s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/export_dog_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.603s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/dog_msgs__rosidl_typesupport_introspection_cExport.cmake
+[2.603s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/dog_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.603s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/dog_msgs__rosidl_typesupport_cExport.cmake
+[2.603s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/dog_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[2.603s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/export_dog_msgs__rosidl_generator_cppExport.cmake
+[2.603s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/export_dog_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.603s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/export_dog_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.603s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/dog_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[2.604s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/dog_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.604s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/dog_msgs__rosidl_typesupport_cppExport.cmake
+[2.604s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/dog_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[2.604s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/export_dog_msgs__rosidl_generator_pyExport.cmake
+[2.604s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/export_dog_msgs__rosidl_generator_pyExport-noconfig.cmake
+[2.604s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/rosidl_cmake-extras.cmake
+[2.604s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.604s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[2.604s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[2.604s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.605s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.605s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.605s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[2.605s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/dog_msgsConfig.cmake
+[2.605s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/cmake/dog_msgsConfig-version.cmake
+[2.605s] -- Installing: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/share/dog_msgs/package.xml
+[2.607s] Invoked command in '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs' returned '0': /usr/bin/cmake --install /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs

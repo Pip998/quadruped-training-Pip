@@ -1,16 +1,16 @@
 {
   "package_name": "dog_msgs",
-  "output_dir": "/home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs/rosidl_generator_rs/dog_msgs",
+  "output_dir": "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/rosidl_generator_rs/dog_msgs",
   "template_dir": "/opt/ros/humble/share/rosidl_generator_rs/cmake/../resource",
   "idl_tuples": [
-    "/home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs/rosidl_adapter/dog_msgs:msg/ControllerCommand.idl",
-    "/home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs/rosidl_adapter/dog_msgs:msg/MotorState.idl",
-    "/home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs/rosidl_adapter/dog_msgs:srv/HandleCommand.idl"
+    "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/rosidl_adapter/dog_msgs:msg/ControllerCommand.idl",
+    "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/rosidl_adapter/dog_msgs:msg/MotorState.idl",
+    "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/rosidl_adapter/dog_msgs:srv/HandleCommand.idl"
   ],
   "ros_interface_files": [
-    "/home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs/rosidl_adapter/dog_msgs/msg/ControllerCommand.idl",
-    "/home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs/rosidl_adapter/dog_msgs/msg/MotorState.idl",
-    "/home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs/rosidl_adapter/dog_msgs/srv/HandleCommand.idl"
+    "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/rosidl_adapter/dog_msgs/msg/ControllerCommand.idl",
+    "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/rosidl_adapter/dog_msgs/msg/MotorState.idl",
+    "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/rosidl_adapter/dog_msgs/srv/HandleCommand.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/share/rosidl_generator_rs/cmake/../../../lib/rosidl_generator_rs/rosidl_generator_rs",
@@ -28,9 +28,9 @@
     "/opt/ros/humble/share/rosidl_generator_rs/cmake/../resource/templates/msg_rmw.rs.em",
     "/opt/ros/humble/share/rosidl_generator_rs/cmake/../resource/templates/srv_idiomatic.rs.em",
     "/opt/ros/humble/share/rosidl_generator_rs/cmake/../resource/templates/srv_rmw.rs.em",
-    "/home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs/rosidl_adapter/dog_msgs/msg/ControllerCommand.idl",
-    "/home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs/rosidl_adapter/dog_msgs/msg/MotorState.idl",
-    "/home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs/rosidl_adapter/dog_msgs/srv/HandleCommand.idl"
+    "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/rosidl_adapter/dog_msgs/msg/ControllerCommand.idl",
+    "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/rosidl_adapter/dog_msgs/msg/MotorState.idl",
+    "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/rosidl_adapter/dog_msgs/srv/HandleCommand.idl"
   ],
   "package_version": "0.0.0"
 }

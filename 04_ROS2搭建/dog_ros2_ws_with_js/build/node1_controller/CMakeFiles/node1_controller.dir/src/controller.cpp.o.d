@@ -1,5 +1,5 @@
 CMakeFiles/node1_controller.dir/src/controller.cpp.o: \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/src/node1_controller/src/controller.cpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/src/node1_controller/src/controller.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/functional \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -616,17 +616,17 @@ CMakeFiles/node1_controller.dir/src/controller.cpp.o: \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/msg/controller_command.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__struct.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__builder.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__traits.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__type_support.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/msg/motor_state.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__struct.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__builder.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__traits.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__type_support.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/controller_command.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__struct.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__builder.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__traits.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/controller_command__type_support.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/motor_state.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__struct.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__builder.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__traits.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/msg/detail/motor_state__type_support.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/imu.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
@@ -639,8 +639,8 @@ CMakeFiles/node1_controller.dir/src/controller.cpp.o: \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__type_support.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/srv/handle_command.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__struct.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__builder.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__traits.hpp \
- /home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__type_support.hpp
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/handle_command.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__struct.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__builder.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__traits.hpp \
+ /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs/include/dog_msgs/dog_msgs/srv/detail/handle_command__type_support.hpp

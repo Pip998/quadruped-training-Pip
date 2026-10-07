@@ -1,6 +1,7 @@
 package.xml
 setup.cfg
 setup.py
+launch/start_all.launch.py
 node2_simulation/__init__.py
 node2_simulation/simulation.py
 node2_simulation.egg-info/PKG-INFO

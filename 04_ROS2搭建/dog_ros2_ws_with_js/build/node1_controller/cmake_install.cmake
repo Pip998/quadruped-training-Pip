@@ -1,8 +1,8 @@
-# Install script for directory: /home/pip/robocon/ROS2_training/dog_ros2_ws1/src/node1_controller
+# Install script for directory: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/src/node1_controller
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller")
+  set(CMAKE_INSTALL_PREFIX "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/node1_controller")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/pip/robocon/ROS2_training/dog_ros2_ws1/build/node1_controller/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/node1_controller/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pip/robocon/ROS2_training/dog_ros2_ws1/build/node1_controller/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/node1_controller/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

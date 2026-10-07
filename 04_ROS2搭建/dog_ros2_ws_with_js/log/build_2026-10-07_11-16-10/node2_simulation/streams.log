@@ -1,0 +1,26 @@
+[0.612s] Invoking command in '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/node2_simulation': PYTHONPATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/node2_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/node2_simulation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/node2_simulation/build --no-deps symlink_data
+[0.747s] running develop
+[0.825s] running egg_info
+[0.825s] creating node2_simulation.egg-info
+[0.825s] writing node2_simulation.egg-info/PKG-INFO
+[0.826s] writing dependency_links to node2_simulation.egg-info/dependency_links.txt
+[0.826s] writing entry points to node2_simulation.egg-info/entry_points.txt
+[0.826s] writing requirements to node2_simulation.egg-info/requires.txt
+[0.826s] writing top-level names to node2_simulation.egg-info/top_level.txt
+[0.826s] writing manifest file 'node2_simulation.egg-info/SOURCES.txt'
+[0.828s] reading manifest file 'node2_simulation.egg-info/SOURCES.txt'
+[0.828s] writing manifest file 'node2_simulation.egg-info/SOURCES.txt'
+[0.830s] running build_ext
+[0.830s] Creating /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/node2_simulation/lib/python3.10/site-packages/node2-simulation.egg-link (link to .)
+[0.830s] Installing node2_simulation script to /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/node2_simulation/lib/node2_simulation
+[0.830s] 
+[0.830s] Installed /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/node2_simulation
+[0.831s] running symlink_data
+[0.831s] creating /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/node2_simulation/share/ament_index
+[0.831s] creating /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/node2_simulation/share/ament_index/resource_index
+[0.831s] creating /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/node2_simulation/share/ament_index/resource_index/packages
+[0.831s] symbolically linking /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/node2_simulation/resource/node2_simulation -> /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/node2_simulation/share/ament_index/resource_index/packages
+[0.831s] symbolically linking /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/node2_simulation/package.xml -> /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/node2_simulation/share/node2_simulation
+[0.831s] creating /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/node2_simulation/share/node2_simulation/launch
+[0.831s] symbolically linking /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/node2_simulation/launch/start_all.launch.py -> /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/node2_simulation/share/node2_simulation/launch
+[0.853s] Invoked command in '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/node2_simulation' returned '0': PYTHONPATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/node2_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/node2_simulation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/node2_simulation/build --no-deps symlink_data

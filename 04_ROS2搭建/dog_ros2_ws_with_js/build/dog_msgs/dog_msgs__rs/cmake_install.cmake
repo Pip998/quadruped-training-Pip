@@ -1,8 +1,8 @@
-# Install script for directory: /home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs/dog_msgs__rs
+# Install script for directory: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/dog_msgs__rs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/dog_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/install/dog_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

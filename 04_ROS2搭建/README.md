@@ -8,6 +8,14 @@ node2_simulation为仿真，通过【话题topic】的自定义消息类型(dog_
 
 node3_handle为手柄/键盘，通过【服务service】的消息类型向node1_controller发送站立/趴卧指令并接收callback。
 
-【此为第一代版本，运行前需要source一下环境，再逐个开启终端运行三个节点】
+【以上为第一代版本，运行前需要source一下环境，再逐个开启终端运行三个节点】
+
+
+
+【以下为第二代版本说明，两个工作空间都添加了launch的功能，因为用python写的，所以运行的时候需要在终端里source一下环境，再执行ros2 launch node2_simulation start_all.launch.py即可】
+
+这样在js后缀文件夹中依旧无法通过Xbox来操控（因为没有手柄），但在pc后缀文件夹中就可以在自动弹出的新终端窗口里键入1/2操控机器狗趴卧/站立了！！
+
+
 
 

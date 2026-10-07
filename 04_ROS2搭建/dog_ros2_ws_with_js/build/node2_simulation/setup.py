@@ -1,1 +1,1 @@
-/home/pip/robocon/ROS2_training/dog_ros2_ws1/src/node2_simulation/setup.py
+/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/src/node2_simulation/setup.py

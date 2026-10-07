@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-99f617212a6a472752d9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "dog_msgs__py",
+					"jsonFile" : "directory-dog_msgs__py-b86d7fd2584e5ad718af.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/dog_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "dog_msgs__rs",
+					"jsonFile" : "directory-dog_msgs__rs-27b37cb51f4a98aeae87.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/dog_msgs__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "dog_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_dog_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_dog_msgs_egg-fdd7991f1d8db99922c8.json",
+					"name" : "ament_cmake_python_build_dog_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_dog_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_dog_msgs-26b5ac2f646d47f9e096.json",
+					"name" : "ament_cmake_python_copy_dog_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dog_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dog_msgs-3a875fea2688a04a8d92.json",
+					"name" : "dog_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dog_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dog_msgs__cpp-ec7e324e5399e6546899.json",
+					"name" : "dog_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "dog_msgs__py::@f1b922543b4ee5f3ab55",
+					"jsonFile" : "target-dog_msgs__py-76f3ba6635f51684cb41.json",
+					"name" : "dog_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dog_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dog_msgs__rosidl_generator_c-faaefebd39cc998a17de.json",
+					"name" : "dog_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dog_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dog_msgs__rosidl_generator_py-38b7fc2094d0917edd6c.json",
+					"name" : "dog_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dog_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dog_msgs__rosidl_typesupport_c-9c4b9046b279ecedc885.json",
+					"name" : "dog_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dog_msgs__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dog_msgs__rosidl_typesupport_c__pyext-e649f6983a4b5c3209e4.json",
+					"name" : "dog_msgs__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dog_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dog_msgs__rosidl_typesupport_cpp-58f79a22b5db80506ad5.json",
+					"name" : "dog_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dog_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dog_msgs__rosidl_typesupport_fastrtps_c-51d634ed3a2c70e22843.json",
+					"name" : "dog_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dog_msgs__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dog_msgs__rosidl_typesupport_fastrtps_c__pyext-c9d54cefa79b3ad38d27.json",
+					"name" : "dog_msgs__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dog_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dog_msgs__rosidl_typesupport_fastrtps_cpp-cebf312aed285682ac28.json",
+					"name" : "dog_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dog_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dog_msgs__rosidl_typesupport_introspection_c-994d6333b313338c4d25.json",
+					"name" : "dog_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dog_msgs__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dog_msgs__rosidl_typesupport_introspection_c__pyext-4a68dc8638052b803794.json",
+					"name" : "dog_msgs__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dog_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dog_msgs__rosidl_typesupport_introspection_cpp-ce41aadc30fdb55fa937.json",
+					"name" : "dog_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "dog_msgs__rs::@8bfee9bb0300ff4b25c6",
+					"jsonFile" : "target-dog_msgs__rs-2b6caa5c97524862e104.json",
+					"name" : "dog_msgs__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dog_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dog_msgs_uninstall-250796cc81aa0e6ba4c6.json",
+					"name" : "dog_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-0cd413e263add3971051.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs",
+		"source" : "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/src/dog_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pip/robocon/ROS2_training/dog_ros2_ws1/src/dog_msgs
+CMAKE_SOURCE_DIR = /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/src/dog_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs
+CMAKE_BINARY_DIR = /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs
 
 # Utility rule file for ament_cmake_python_copy_dog_msgs.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_copy_dog_msgs.dir/compiler_depend.make
 include CMakeFiles/ament_cmake_python_copy_dog_msgs.dir/progress.make
 
 CMakeFiles/ament_cmake_python_copy_dog_msgs:
-	/usr/bin/cmake -E copy_directory /home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs/rosidl_generator_py/dog_msgs /home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs/ament_cmake_python/dog_msgs/dog_msgs
+	/usr/bin/cmake -E copy_directory /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/rosidl_generator_py/dog_msgs /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/ament_cmake_python/dog_msgs/dog_msgs
 
 ament_cmake_python_copy_dog_msgs: CMakeFiles/ament_cmake_python_copy_dog_msgs
 ament_cmake_python_copy_dog_msgs: CMakeFiles/ament_cmake_python_copy_dog_msgs.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_copy_dog_msgs.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_copy_dog_msgs.dir/clean
 
 CMakeFiles/ament_cmake_python_copy_dog_msgs.dir/depend:
-	cd /home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pip/robocon/ROS2_training/dog_ros2_ws1/src/dog_msgs /home/pip/robocon/ROS2_training/dog_ros2_ws1/src/dog_msgs /home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs /home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs /home/pip/robocon/ROS2_training/dog_ros2_ws1/build/dog_msgs/CMakeFiles/ament_cmake_python_copy_dog_msgs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/src/dog_msgs /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/src/dog_msgs /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs /home/pip/robocon/ROS2_training/dog_ros2_ws_with_js/build/dog_msgs/CMakeFiles/ament_cmake_python_copy_dog_msgs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_copy_dog_msgs.dir/depend
 
