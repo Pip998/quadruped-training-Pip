@@ -1,0 +1,1 @@
+/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/build/node1_controller/ament_cmake_core/node1_controllerConfig.cmake

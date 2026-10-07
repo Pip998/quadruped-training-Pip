@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/build/node1_controller/node1_controller" "TARGETS" "node1_controller" "DESTINATION" "lib/node1_controller")

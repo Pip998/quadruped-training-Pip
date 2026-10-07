@@ -1,0 +1,8 @@
+{
+  "package_name": "dog_msgs",
+  "non_idl_tuples": [
+    "/home/pip/robocon/ROS2_training/dog_ros2_ws1/src/dog_msgs:msg/ControllerCommand.msg",
+    "/home/pip/robocon/ROS2_training/dog_ros2_ws1/src/dog_msgs:msg/MotorState.msg",
+    "/home/pip/robocon/ROS2_training/dog_ros2_ws1/src/dog_msgs:srv/HandleCommand.srv"
+  ]
+}

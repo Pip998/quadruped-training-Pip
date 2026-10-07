@@ -1,0 +1,1 @@
+/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/build/node3_handle/ament_cmake_environment_hooks/local_setup.bash

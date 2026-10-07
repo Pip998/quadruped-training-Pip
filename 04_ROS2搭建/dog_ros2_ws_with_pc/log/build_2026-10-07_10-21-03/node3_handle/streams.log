@@ -1,0 +1,71 @@
+[0.006s] Invoking command in '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/build/node3_handle': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs LD_LIBRARY_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib/pkgconfig PYTHONPATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/share /usr/bin/cmake /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/src/node3_handle -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle
+[0.050s] -- The C compiler identification is GNU 11.4.0
+[0.089s] -- The CXX compiler identification is GNU 11.4.0
+[0.094s] -- Detecting C compiler ABI info
+[0.154s] -- Detecting C compiler ABI info - done
+[0.158s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.158s] -- Detecting C compile features
+[0.158s] -- Detecting C compile features - done
+[0.160s] -- Detecting CXX compiler ABI info
+[0.227s] -- Detecting CXX compiler ABI info - done
+[0.231s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.231s] -- Detecting CXX compile features
+[0.232s] -- Detecting CXX compile features - done
+[0.233s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.339s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.403s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.416s] -- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)
+[0.441s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.443s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.449s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.455s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.465s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.488s] -- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.489s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.557s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.575s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.606s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.611s] -- Looking for pthread.h
+[0.669s] -- Looking for pthread.h - found
+[0.670s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.730s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.731s] -- Found Threads: TRUE  
+[0.768s] -- Found sensor_msgs: 4.9.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.790s] -- Found dog_msgs: 0.0.0 (/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/share/dog_msgs/cmake)
+[0.798s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.851s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.851s] -- Configured cppcheck include dirs: 
+[0.851s] -- Configured cppcheck exclude dirs and/or files: 
+[0.851s] -- Added test 'lint_cmake' to check CMake code style
+[0.852s] -- Added test 'uncrustify' to check C / C++ code style
+[0.852s] -- Configured uncrustify additional arguments: 
+[0.852s] -- Added test 'xmllint' to check XML markup files
+[0.853s] -- Configuring done
+[0.861s] -- Generating done
+[0.863s] -- Build files have been written to: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/build/node3_handle
+[0.871s] Invoked command in '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/build/node3_handle' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs LD_LIBRARY_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib/pkgconfig PYTHONPATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/share /usr/bin/cmake /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/src/node3_handle -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle
+[0.872s] Invoking command in '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/build/node3_handle': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs LD_LIBRARY_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib/pkgconfig PYTHONPATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/share /usr/bin/cmake --build /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/build/node3_handle -- -j32 -l32
+[0.914s] [ 50%] [32mBuilding CXX object CMakeFiles/node3_handle.dir/src/handle.cpp.o[0m
+[3.423s] [100%] [32m[1mLinking CXX executable node3_handle[0m
+[3.557s] [100%] Built target node3_handle
+[3.566s] Invoked command in '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/build/node3_handle' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs LD_LIBRARY_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib/pkgconfig PYTHONPATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/share /usr/bin/cmake --build /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/build/node3_handle -- -j32 -l32
+[3.567s] Invoking command in '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/build/node3_handle': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs LD_LIBRARY_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib/pkgconfig PYTHONPATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/share /usr/bin/cmake --install /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/build/node3_handle
+[3.572s] -- Install configuration: ""
+[3.572s] -- Execute custom install script
+[3.573s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/lib/node3_handle/node3_handle
+[3.580s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/ament_index/resource_index/package_run_dependencies/node3_handle
+[3.587s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/ament_index/resource_index/parent_prefix_path/node3_handle
+[3.598s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/node3_handle/environment/ament_prefix_path.sh
+[3.604s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/node3_handle/environment/ament_prefix_path.dsv
+[3.610s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/node3_handle/environment/path.sh
+[3.616s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/node3_handle/environment/path.dsv
+[3.623s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/node3_handle/local_setup.bash
+[3.630s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/node3_handle/local_setup.sh
+[3.636s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/node3_handle/local_setup.zsh
+[3.646s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/node3_handle/local_setup.dsv
+[3.653s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/node3_handle/package.dsv
+[3.659s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/ament_index/resource_index/packages/node3_handle
+[3.664s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/node3_handle/cmake/node3_handleConfig.cmake
+[3.671s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/node3_handle/cmake/node3_handleConfig-version.cmake
+[3.677s] -- Symlinking: /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/node3_handle/share/node3_handle/package.xml
+[3.685s] Invoked command in '/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/build/node3_handle' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs LD_LIBRARY_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/lib/pkgconfig PYTHONPATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/install/dog_msgs/share /usr/bin/cmake --install /home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/build/node3_handle

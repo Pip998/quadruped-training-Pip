@@ -1,0 +1,9 @@
+source;share/node2_simulation/hook/pythonpath.ps1
+source;share/node2_simulation/hook/pythonpath.dsv
+source;share/node2_simulation/hook/pythonpath.sh
+source;share/node2_simulation/hook/ament_prefix_path.ps1
+source;share/node2_simulation/hook/ament_prefix_path.dsv
+source;share/node2_simulation/hook/ament_prefix_path.sh
+source;../../build/node2_simulation/share/node2_simulation/hook/pythonpath_develop.ps1
+source;../../build/node2_simulation/share/node2_simulation/hook/pythonpath_develop.dsv
+source;../../build/node2_simulation/share/node2_simulation/hook/pythonpath_develop.sh

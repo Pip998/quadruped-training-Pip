@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from dog_msgs/srv/HandleCommand.srv
+// generated code does not contain a copyright notice
+
+
+module dog_msgs {
+  module srv {
+    struct HandleCommand_Request {
+      int32 command;
+    };
+    struct HandleCommand_Response {
+      boolean success;
+    };
+  };
+};

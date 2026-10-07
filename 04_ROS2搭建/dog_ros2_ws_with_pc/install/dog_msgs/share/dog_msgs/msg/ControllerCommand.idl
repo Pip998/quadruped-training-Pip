@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from dog_msgs/msg/ControllerCommand.msg
+// generated code does not contain a copyright notice
+
+
+module dog_msgs {
+  module msg {
+    typedef double double__12[12];
+    struct ControllerCommand {
+      double__12 kp;
+
+      double__12 kd;
+
+      double__12 q;
+
+      double__12 w;
+
+      double__12 tau;
+    };
+  };
+};

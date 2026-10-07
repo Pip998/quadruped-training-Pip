@@ -1,0 +1,16 @@
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/lib/node1_controller/node1_controller
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/ament_index/resource_index/package_run_dependencies/node1_controller
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/ament_index/resource_index/parent_prefix_path/node1_controller
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/node1_controller/environment/ament_prefix_path.sh
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/node1_controller/environment/ament_prefix_path.dsv
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/node1_controller/environment/path.sh
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/node1_controller/environment/path.dsv
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/node1_controller/local_setup.bash
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/node1_controller/local_setup.sh
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/node1_controller/local_setup.zsh
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/node1_controller/local_setup.dsv
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/node1_controller/package.dsv
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/ament_index/resource_index/packages/node1_controller
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/node1_controller/cmake/node1_controllerConfig.cmake
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/node1_controller/cmake/node1_controllerConfig-version.cmake
+/home/pip/robocon/ROS2_training/dog_ros2_ws1/install/node1_controller/share/node1_controller/package.xml

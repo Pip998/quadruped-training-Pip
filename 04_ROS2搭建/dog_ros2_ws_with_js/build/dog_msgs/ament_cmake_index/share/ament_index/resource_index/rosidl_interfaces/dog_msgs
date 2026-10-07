@@ -1,0 +1,8 @@
+msg/ControllerCommand.idl
+msg/ControllerCommand.msg
+msg/MotorState.idl
+msg/MotorState.msg
+srv/HandleCommand.idl
+srv/HandleCommand.srv
+srv/HandleCommand_Request.msg
+srv/HandleCommand_Response.msg

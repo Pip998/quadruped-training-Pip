@@ -1,0 +1,24 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pip/robocon/ROS2_training/dog_ros2_ws1/src/node1_controller/src/controller.cpp:7[m[K:
+[01m[K/home/pip/robocon/ROS2_training/dog_ros2_ws1/src/node1_controller/src/controller.cpp:[m[K In member function ‘[01m[Kvoid controller::handle_command(std::shared_ptr<dog_msgs::srv::HandleCommand_Request_<std::allocator<void> > >, std::shared_ptr<dog_msgs::srv::HandleCommand_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/pip/robocon/ROS2_training/dog_ros2_ws1/src/node1_controller/src/controller.cpp:104:21:[m[K [01;35m[Kwarning: [m[Ktoo many arguments for format [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-extra-args-Wformat-extra-args]8;;[m[K]
+  104 |                     [01;35m[K"未知指令"[m[K,
+      |                     [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/pip/robocon/ROS2_training/dog_ros2_ws1/src/node1_controller/src/controller.cpp:[m[K In member function ‘[01m[Kvoid controller::motor_state_callback(dog_msgs::msg::MotorState_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/pip/robocon/ROS2_training/dog_ros2_ws1/src/node1_controller/src/controller.cpp:159:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  159 |             [01;35m[Kconst dog_msgs::msg::MotorState::SharedPtr msg[m[K
+      |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/pip/robocon/ROS2_training/dog_ros2_ws1/src/node1_controller/src/controller.cpp:[m[K In member function ‘[01m[Kvoid controller::imu_callback(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/pip/robocon/ROS2_training/dog_ros2_ws1/src/node1_controller/src/controller.cpp:167:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  167 |             [01;35m[Kconst sensor_msgs::msg::Imu::SharedPtr msg[m[K
+      |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K

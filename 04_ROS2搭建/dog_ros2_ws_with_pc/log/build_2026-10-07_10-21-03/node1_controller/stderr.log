@@ -1,0 +1,8 @@
+[01m[K/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/src/node1_controller/src/controller.cpp:[m[K In member function ‘[01m[Kvoid controller::motor_state_callback(dog_msgs::msg::MotorState_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/src/node1_controller/src/controller.cpp:159:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  159 |             [01;35m[Kconst dog_msgs::msg::MotorState::SharedPtr msg[m[K
+      |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/src/node1_controller/src/controller.cpp:[m[K In member function ‘[01m[Kvoid controller::imu_callback(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/pip/robocon/ROS2_training/dog_ros2_ws_with_pc/src/node1_controller/src/controller.cpp:167:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  167 |             [01;35m[Kconst sensor_msgs::msg::Imu::SharedPtr msg[m[K
+      |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K

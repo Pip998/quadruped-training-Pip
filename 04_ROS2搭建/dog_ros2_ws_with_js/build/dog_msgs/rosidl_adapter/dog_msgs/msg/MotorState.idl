@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from dog_msgs/msg/MotorState.msg
+// generated code does not contain a copyright notice
+
+
+module dog_msgs {
+  module msg {
+    typedef double double__12[12];
+    struct MotorState {
+      double__12 q;
+
+      double__12 dq;
+
+      double__12 ddq;
+
+      double__12 tau;
+
+      double__12 cur;
+    };
+  };
+};
