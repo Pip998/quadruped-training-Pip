@@ -33,4 +33,5 @@ bash:
 
 sudo apt install liblcm-dev libyaml-cpp-dev
 
+4.找到controller的CmakeLists，修改rl_policy.cpp的路径；打开.bash，检查Torch（即libtorch）的路径是否与下载的一致。
 
