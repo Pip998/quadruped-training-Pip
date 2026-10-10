@@ -1,0 +1,10 @@
+# 大文件与依赖库
+*.zip
+*.so
+*.a
+05_大作业/walking_dog/version1/libtorch/
+00_nwwolf/大作业 (1).zip
+*.zip
+*.so
+*.a
+libtorch/
