@@ -2,7 +2,6 @@
 #include <memory>
 #include <string>
 #include <vector>
-#include <cmath>  // 为了监测q_pos在reset后的突变以及时调整输出力矩不让狗乱飞
 #include <array>
 #include <algorithm>
 #include <mutex>
@@ -35,7 +34,7 @@ public:
             "handle_command",
             std::bind(&controller::handle_command, this,
                       std::placeholders::_1, std::placeholders::_2));
-
+        // 加载预姿态、rl
         init_commands();
         init_rl();
 
@@ -43,13 +42,13 @@ public:
     }
 
 private:
-    // ---------------- RL 初始化 ----------------
+    // RL初始化
     void init_rl()
     {
         std::string base = std::string(std::getenv("HOME"))
-                         + "/robocon/ROS2_training/03_walking_dog/version1/"
+                         + "/robocon/03_ROS2_training/03_walking_dog/version1/"
                            "src/node1_controller/config/black";
-        std::string cfg_path = base + "/config.yaml";
+        std::string cfg_path = base + "/config.yaml"; // 引入训练结果
         std::string pt_path  = base + "/best.pt";
         
         
@@ -62,7 +61,7 @@ private:
         }
     }
 
-    // ---------------- service ----------------
+    // 服务回调
     void handle_command(
         const std::shared_ptr<dog_msgs::srv::HandleCommand::Request> request,
         std::shared_ptr<dog_msgs::srv::HandleCommand::Response> response)
@@ -116,7 +115,7 @@ private:
             rl_mode_ = true;
             stand_slew_active_ = false;
 
-            current_vx_ = 1.5;  // 1.0的匀速直线运动
+            current_vx_ = 1.2;  // 匀速直线运动
             current_vy_ = 0.0;
             current_wz_ = 0.0;
 
@@ -135,7 +134,7 @@ private:
             rl_mode_ = true;
             stand_slew_active_ = false;
 
-            current_vx_ = -1.2;  
+            current_vx_ = -1.0;  
             current_vy_ =  0.0;
             current_wz_ =  0.0;
 
@@ -183,11 +182,11 @@ private:
         }
     }
 
-    // ---------------- 初始化静态指令 ----------------
-    void init_commands()
+    // 静态指令参数
+        void init_commands()
     {
         lay_command_.kp.fill(0.0);
-        lay_command_.kd.fill(3.0);
+        lay_command_.kd.fill(2.5);
         lay_command_.q = {
             0.0,  0.7, -1.6,
             0.0, -0.7,  1.6,
@@ -203,12 +202,7 @@ private:
             50.0, 50.0, 50.0,
             50.0, 50.0, 50.0
         };
-        stand_command_.kd = {
-            3.0, 3.0, 3.0,
-            3.0, 3.0, 3.0,
-            3.0, 3.0, 3.0,
-            3.0, 3.0, 3.0
-        };
+        stand_command_.kd.fill(2.0);
         stand_command_.q = {
             0.0,   0.5, -1.3,
             0.0,  -0.5,  1.3,
@@ -221,50 +215,12 @@ private:
         stand_target_.fill(0.0);
     }
 
-    // ---------------- 回调 ----------------
+    // 回调
     void motor_state_callback(const dog_msgs::msg::MotorState::SharedPtr msg)
     {
         RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
                              "已同步电机状态");
-    // 添加reset的状态监测
-    {
-        double max_delta = 0.0;
-        for (int i = 0; i < 12; ++i) {
-            double d = std::abs(msg->q[i] - prev_q_[i]);
-            if (d > max_delta) max_delta = d;
-        }
-        // 记录本帧
-        for (int i = 0; i < 12; ++i) prev_q_[i] = msg->q[i];
 
-        if (first_motor_frame_) {
-            // 第一帧只记录，不判定
-            first_motor_frame_ = false;
-        }
-        else if (max_delta > RESET_DELTA_THRESHOLD) {
-            RCLCPP_WARN(this->get_logger(),
-                        "检测到 reset（Δq=%.3f），重置控制器状态",
-                        max_delta);
-
-            // 清空控制器内部状态
-            rl_mode_ = false;
-            stand_slew_active_ = false;
-            stand_target_.fill(0.0);
-            first_rl_frame_ = true;
-            has_motor_q_ = false;
-            if (rl_policy_) rl_policy_->resetHistory();
-
-            // 发 kp=0 阻尼指令，让 simulation 切到 damping 模式
-            dog_msgs::msg::ControllerCommand damp;
-            damp.kp.fill(0.0);
-            damp.kd.fill(3.0);
-            damp.q.fill(0.0);
-            damp.w.fill(0.0);
-            damp.tau.fill(0.0);
-            publisher_->publish(damp);
-
-            return;  // 本帧不再做别的
-        }
-    }
         // 缓存当前电机位置
         {
             std::lock_guard<std::mutex> lock(cmd_mtx_);
@@ -282,14 +238,14 @@ private:
             dog_msgs::msg::ControllerCommand cmd;
             cmd.kp  = stand_command_.kp;
             cmd.kd  = stand_command_.kd;
-            cmd.q   = stand_target_;    // 现在两边都是 std::array<double,12>
+            cmd.q   = stand_target_;  
             cmd.w   = stand_command_.w;
             cmd.tau = stand_command_.tau;
             publisher_->publish(cmd);
             return;
         }
 
-        // ---- RL 推理 ----
+        // RL函数输入
         if (!rl_mode_ || !rl_policy_) return;
 
         std::vector<double> q_sim(msg->q.begin(), msg->q.end());
@@ -298,7 +254,7 @@ private:
         std::vector<double> omega_body = has_imu_ ? omega_body_ : std::vector<double>{0,0,0};
         std::vector<double> gravity_body = has_imu_ ? gravity_body_ : std::vector<double>{0,0,-1};
 
-        // 前进命令
+        // 速度作为参数引入函数
         std::vector<double> commands = {current_vx_, current_vy_, current_wz_};
         std::vector<double> q_target_sim;
         try {
@@ -308,9 +264,9 @@ private:
             rl_mode_ = false;
             return;
         }
-
+        // 函数输出指令
         dog_msgs::msg::ControllerCommand cmd;
-        // 用 std::copy 把 vector 填进 array
+
         std::copy(rl_policy_->rlKp().begin(), rl_policy_->rlKp().end(),
                   cmd.kp.begin());
         std::copy(rl_policy_->rlKd().begin(), rl_policy_->rlKd().end(),
@@ -328,6 +284,7 @@ private:
         }
     }
 
+    // IMU回调
     void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
     {
         RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
@@ -342,7 +299,7 @@ private:
         has_imu_ = true;
     }
 
-    // ---------------- 成员 ----------------
+    // 所有成员 
     dog_msgs::msg::ControllerCommand lay_command_;
     dog_msgs::msg::ControllerCommand stand_command_;
 
@@ -350,11 +307,6 @@ private:
     rclcpp::Subscription<dog_msgs::msg::MotorState>::SharedPtr subscriber1_;
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr subscriber2_;
     rclcpp::Service<dog_msgs::srv::HandleCommand>::SharedPtr service_;
-
-    // reset监测
-    std::array<double, 12> prev_q_{};
-    bool first_motor_frame_ = true;
-    const double RESET_DELTA_THRESHOLD = 1.0;
 
     // rl引入
     std::unique_ptr<RLPolicy> rl_policy_;
@@ -364,9 +316,9 @@ private:
     bool has_motor_q_ = false;
 
     // 站立缓动
-    const double TARGET_SLEW_RATE = 0.01;
-    bool stand_slew_active_ = false;
-    std::array<double, 12> stand_target_{};      // ← 从 vector 改成 array
+    const double TARGET_SLEW_RATE = 0.01; // 缓动
+    bool stand_slew_active_ = false; // 开关
+    std::array<double, 12> stand_target_{};      
 
     // 前进命令
     double current_vx_ = 0.0;
@@ -374,7 +326,7 @@ private:
     double current_wz_ = 0.0;
 
     // 缓存
-    std::array<double, 12> last_motor_q_{};      // ← 从 vector 改成 array
+    std::array<double, 12> last_motor_q_{};  
     std::vector<double> omega_body_ = {0, 0, 0};
     std::vector<double> gravity_body_ = {0, 0, -1};
 

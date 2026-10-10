@@ -10,9 +10,9 @@ from sensor_msgs.msg import Imu # 给imu单开个sensor的msg
 import mujoco
 import mujoco.viewer
 
-# 世界系和机体系不同，角速度：世界系->机体系，为了符合policy，采用机体参考系
+# 世界系和机体系不同 角速度：世界系->机体系，为了符合policy，采用机体参考系
 def quat_to_rot_matrix(w, x, y, z):
-    """四元数 (w,x,y,z) -> 3x3 旋转矩阵（MuJoCo 默认 w 在前）"""
+    """四元数 (w,x,y,z) -> 3x3 旋转矩阵"""
     R = np.array([
         [1-2*(y*y+z*z),   2*(x*y - z*w),   2*(x*z + y*w)],
         [  2*(x*y + z*w), 1-2*(x*x+z*z),   2*(y*z - x*w)],
@@ -49,6 +49,7 @@ class SimulationNode(Node):
             0.02,
             self.publish_motor_state
         )
+        
         self.imu_timer = self.create_timer(
             0.02,
             self.publish_imu
@@ -109,19 +110,17 @@ class SimulationNode(Node):
 
         self.data.qpos[0] = 0.0
         self.data.qpos[1] = 0.0
-        self.data.qpos[2] = 0.50
-
+        self.data.qpos[2] = 0.45
         self.data.qpos[3:7] = [
             1.0, 0.0, 0.0, 0.0
         ]
-
         self.data.qpos[7:19] = [
             0.0,  0.7, -1.6,    # FL
             0.0, -0.7,  1.6,    # FR
             0.0, -0.7,  1.6,    # RR
             0.0,  0.7, -1.6     # RL
         ]
-
+        # 派生变量不做步进
         mujoco.mj_forward(
             self.model,
             self.data
@@ -129,18 +128,15 @@ class SimulationNode(Node):
 
         # MuJoCo仿真线程
     def simulation_thread(self):
-        last_qpos = self.data.qpos.copy()   # ← 新增：记录上一帧 qpos
         while rclpy.ok():
             step_start = time.perf_counter()
             with self.lock:
-
+                # 读取
                 q = self.data.qpos[7:19].copy()
                 dq = self.data.qvel[6:18].copy()
 
                 if not self.command_received:
                     self.data.ctrl[:] = 0.0
-                elif self.control_mode == "damping":
-                    self.data.ctrl[:] = -3.0 * dq
                 else:
                     control_torque = (
                         self.kp * (self.q_des - q)
@@ -178,7 +174,7 @@ class SimulationNode(Node):
 
         self.motor_state_publisher.publish(msg)
 
-    # 仿真～控制器（IMU）
+    # 仿真～控制器（发布IMU）
     def publish_imu(self):
         msg = Imu()
         with self.lock:
