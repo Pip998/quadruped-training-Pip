@@ -3,9 +3,9 @@
 #include <iostream>
 #include <stdexcept>
 
-// 关节索引重映射
-// 仿真：FL-FR-RR-RL
-// 策略：FL-FR-RL-RR
+// 先重映射关节索引，仿真：FL-FR-RR-RL；策略：FL-FR-RL-RR
+
+// 仿真->策略
 std::vector<double> RLPolicy::remapSimToPolicy(const std::vector<double>& v) {
     if (v.size() != 12) throw std::runtime_error("remap: size != 12");
     std::vector<double> out(12);
@@ -17,7 +17,7 @@ std::vector<double> RLPolicy::remapSimToPolicy(const std::vector<double>& v) {
     for (int i = 0; i < 3; ++i) out[6 + i] = v[9 + i];
     return out;
 }
-
+// 策略->仿真
 std::vector<double> RLPolicy::remapPolicyToSim(const std::vector<double>& v) {
     if (v.size() != 12) throw std::runtime_error("remap: size != 12");
     std::vector<double> out(12);
@@ -29,10 +29,11 @@ std::vector<double> RLPolicy::remapPolicyToSim(const std::vector<double>& v) {
     return out;
 }
 
-// ---- 初始化 ----
+// 初始化 
+// 
 bool RLPolicy::init(const std::string& config_path, const std::string& pt_path) {
     try {
-        module_ = torch::jit::load(pt_path);
+        module_ = torch::jit::load(pt_path); // 把best.pt加载成module_
         module_.eval();
         loaded_ = true;
     } catch (const c10::Error& e) {
@@ -40,12 +41,16 @@ bool RLPolicy::init(const std::string& config_path, const std::string& pt_path) 
         return false;
     }
 
+    //读取yaml里的系数使其可用
+
     YAML::Node cfg = YAML::LoadFile(config_path);
+    
+    // 开始乘系数
 
     num_obs_     = cfg["num_observations"].as<int>(45);
-    history_len_ = cfg["observations_history"].as<std::vector<int>>().size();
+    history_len_ = cfg["observations_history"].as<std::vector<int>>().size(); // 堆叠6帧
 
-    default_dof_pos_ = cfg["default_dof_pos"].as<std::vector<double>>();
+    default_dof_pos_ = cfg["default_dof_pos"].as<std::vector<double>>(); // 12维关节角，增量输出
     rl_kp_           = cfg["rl_kp"].as<std::vector<double>>();
     rl_kd_           = cfg["rl_kd"].as<std::vector<double>>();
     action_scale_    = cfg["action_scale"].as<std::vector<double>>();
@@ -67,7 +72,7 @@ bool RLPolicy::init(const std::string& config_path, const std::string& pt_path) 
               << " history=" << history_len_ << std::endl;
     return true;
 }
-
+// 给mtx_上锁 进入RL模式会有非RL模式的残留
 void RLPolicy::resetHistory() {
     std::lock_guard<std::mutex> lock(mtx_);
     obs_history_.clear();
@@ -78,7 +83,7 @@ void RLPolicy::resetHistory() {
     last_action_.assign(12, 0.0f);
 }
 
-// ---- 单次推理 ----
+// 单次推理
 std::vector<double> RLPolicy::infer(
     const std::vector<double>& q_sim,
     const std::vector<double>& dq_sim,
@@ -86,6 +91,7 @@ std::vector<double> RLPolicy::infer(
     const std::vector<double>& gravity_body,
     const std::vector<double>& commands)
 {
+    // 参数检查
     if (!loaded_) throw std::runtime_error("[RLPolicy] not loaded");
     if (q_sim.size() != 12 || dq_sim.size() != 12)
         throw std::runtime_error("[RLPolicy] q/dq size != 12");
@@ -94,11 +100,11 @@ std::vector<double> RLPolicy::infer(
 
     std::lock_guard<std::mutex> lock(mtx_);
 
-    // 1) 关节重映射：仿真 FL-FR-RR-RL -> 策略 FL-FR-RL-RR
+    // 1) 关节重映射：仿真 -> 策略
     auto q_pol  = remapSimToPolicy(q_sim);
     auto dq_pol = remapSimToPolicy(dq_sim);
 
-    // 2) 组装一帧 45 维观测
+    // 2) 组装一帧45维观测
     std::vector<float> obs(num_obs_, 0.0f);
     int k = 0;
 
@@ -132,10 +138,8 @@ std::vector<double> RLPolicy::infer(
     while ((int)obs_history_.size() > history_len_)
         obs_history_.pop_front();
 
-    // 4) 拼成 1 x (6*45) 输入张量。obs_history_[0] 是旧帧
-    //    说明：config 中 observations_history = [0,1,2,3,4,5]，
-    //    0 表示最新，5 表示最旧。我们送入网络时按 [最新, 次新, ..., 最旧]
-    //    的顺序拼接，与训练一致。
+    // 4) 拼成 6*45 = 270维输入张量。obs_history_[0] 是旧帧
+    // config 中 observations_history = [0,1,2,3,4,5]，0 表示最新，5 表示最旧。
     std::vector<float> stacked;
     stacked.reserve(num_obs_ * history_len_);
     for (int h = 0; h < history_len_; ++h) {
@@ -161,10 +165,10 @@ std::vector<double> RLPolicy::infer(
     for (int i = 0; i < 12; ++i)
         action_pol[i] = out[0][i].item<float>();
 
-    // 记录作为下一帧的 last_action
+    // 记为下一帧 last_action
     last_action_ = action_pol;
 
-    // 7) 换算成目标关节位置（策略顺序），再重映射回仿真顺序
+    // 7) 策略顺序重映射回仿真顺序
     std::vector<double> q_target_pol(12);
     for (int i = 0; i < 12; ++i) {
         q_target_pol[i] = default_dof_pos_[i]
